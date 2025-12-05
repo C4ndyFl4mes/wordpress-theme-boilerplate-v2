@@ -1,7 +1,8 @@
 <?php
 
 // Används för att kolla om det körs lokalt eller inte.
-function vite_server_running($host = 'localhost', $port = 5173) {
+function vite_server_running($host = 'localhost', $port = 5173)
+{
     $connection = @fsockopen($host, $port, $errno, $errstr, 0.2);
 
     if ($connection) {
@@ -12,7 +13,8 @@ function vite_server_running($host = 'localhost', $port = 5173) {
 }
 
 // Slår ihop själva projektet till en fungerande webbplats.
-function mytheme_enqueue_assets() {
+function mytheme_enqueue_assets()
+{
 
     $theme_dir  = get_template_directory_uri();
     $theme_path = get_template_directory();
